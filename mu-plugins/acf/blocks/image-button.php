@@ -1,0 +1,126 @@
+<?php acf_add_local_field_group(array(
+	'key' => 'group_6018a388786b2',
+	'title' => 'Image Button',
+	'fields' => array(
+		array(
+			'key' => 'field_6018a48c114f2',
+			'label' => 'Content',
+			'name' => 'is_manual',
+			'type' => 'true_false',
+			'instructions' => '“Auto” builds this from a selected page/post.
+“Manual” allows you to pick this button’s elements.',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => '',
+			'default_value' => 0,
+			'ui' => 1,
+			'ui_on_text' => 'Manual',
+			'ui_off_text' => 'Auto',
+		),
+		array(
+			'key' => 'field_6018a4a6114f3',
+			'label' => 'Page',
+			'name' => 'page',
+			'type' => 'post_object',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_6018a48c114f2',
+						'operator' => '!=',
+						'value' => '1',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'post_type' => '',
+			'taxonomy' => '',
+			'allow_null' => 0,
+			'multiple' => 0,
+			'return_format' => 'object',
+			'ui' => 1,
+		),
+		array(
+			'key' => 'field_6018a549114f4',
+			'label' => 'Background',
+			'name' => 'bkgd',
+			'type' => 'image',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_6018a48c114f2',
+						'operator' => '==',
+						'value' => '1',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'array',
+			'preview_size' => 'medium',
+			'library' => 'all',
+			'min_width' => '',
+			'min_height' => '',
+			'min_size' => '',
+			'max_width' => '',
+			'max_height' => '',
+			'max_size' => '',
+			'mime_types' => '',
+		),
+		array(
+			'key' => 'field_6018a74d114f5',
+			'label' => 'Link',
+			'name' => 'link',
+			'type' => 'link',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_6018a48c114f2',
+						'operator' => '==',
+						'value' => '1',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'array',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'block',
+				'operator' => '==',
+				'value' => 'acf/image-button',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));

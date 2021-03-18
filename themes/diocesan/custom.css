@@ -1,0 +1,296 @@
+
+
+
+
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+  h1 {
+      }
+  h2 {
+      }
+  h3 {
+      }
+  h4 {
+      }
+  h5 {
+      }
+  h6 {
+      }
+
+a, .accordion a {
+  }
+
+a:hover, a:focus, .accordion a:hover, .accordion a:focus {
+  }
+
+p, ol, ul, .simcal-default-calendar-grid ul.simcal-events {
+  }
+
+.page-heading-title {
+  font-size: 0px !important;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+  .page-heading-title {
+    font-size: 0px !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .page-heading-title {
+    font-size: 0px !important;
+  }
+}
+
+.simcal-calendar-list .simcal-event-details a:hover *, .simcal-calendar-list .simcal-event-details a:focus * {
+  color: #FFFFFF !important;
+}
+
+figcaption, .envira-album-title, .envira-album-image-count, .gform_confirmation_message {
+  font-family: sans-serif;
+}
+
+    .has-0background-color {
+      background: primary !important;
+    }
+      .has-1background-color {
+      background: secondary !important;
+    }
+      .has-2background-color {
+      background: tertiary !important;
+    }
+      .has-3background-color {
+      background: quaternary !important;
+    }
+      .has-whitebackground-color {
+      background: #FFFFFF !important;
+    }
+      .has-blackbackground-color {
+      background: #0F0F0F !important;
+    }
+  
+<!-- .has-white-background-color {
+  background: #F00000 !important;
+} -->
+
+.has-white-background-color-hover:hover,
+.has-white-background-color-hover:focus {
+  background: #FFFFFF !important;
+}
+
+.has-white-background-color-before::before {
+  background: #FFFFFF !important;
+}
+
+.has-white-background-color-hover-before:hover::before,
+.has-white-background-color-hover-before:focus::before {
+  background: #FFFFFF !important;
+}
+
+.has-white-background-color-after::after {
+  background: #FFFFFF !important;
+}
+
+.has-white-background-color-hover-after:hover::after,
+.has-white-background-color-hover-after:focus::after {
+  background: #FFFFFF !important;
+}
+
+.has-white-border-color {
+  border-color: #FFFFFF !important;
+}
+
+.has-white-border-color-hover:hover,
+.has-white-border-color-hover:focus {
+  border-color: #FFFFFF !important;
+}
+
+.has-white-color {
+  color: #FFFFFF !important;
+}
+
+.has-white-color-hover:hover,
+.has-white-color-hover:focus {
+  color: #FFFFFF !important;
+}
+
+.has-white-color-before::before {
+  color: #FFFFFF !important;
+}
+
+.has-white-color-hover-before:hover::before,
+.has-white-color-hover-before:focus::before {
+  color: #FFFFFF !important;
+}
+
+.has-white-color-after::after {
+  color: #FFFFFF !important;
+}
+
+.has-white-color-hover-after:hover::after,
+.has-white-color-hover-after:focus::after {
+  color: #FFFFFF !important;
+}
+
+.font-heading {
+  font-family: serif !important;
+}
+
+.font-main {
+  font-family: sans-serif !important;
+}
+
+.font-script {
+  font-family: cursive  !important;
+}
+
+.mm-search input {
+  font-family: sans-serif !important;
+}
+
+.gform_button {
+  background:  !important;
+  border: 0;
+  color: #FFFFFF !important;
+}
+  .gform_button:hover, .gform_button:focus {
+    background:  !important;
+  }
+
+ul.slick-dots li button {
+  background:  !important;
+  transition: background 0.25s ease-in;
+}
+  ul.slick-dots li button:hover, ul.slick-dots li button:focus {
+    border-color:  !important;
+  }
+
+ul.slick-dots li.slick-active button {
+  background:  !important;
+  border-color:  !important;
+}
+
+.hero .slick-arrow, .statistics .slick-arrow {
+  border-color: #FFFFFF !important;
+}
+
+.hero .slick-arrow:hover, .hero .slick-arrow:focus {
+  background: ;
+}
+
+.featured-buttons .slick-arrow,
+.the-news .slick-arrow {
+  border-color:  !important;
+}
+  .featured-buttons .slick-arrow::before,
+  .the-news .slick-arrow::before {
+    color:  !important;
+  }
+
+  .featured-buttons .slick-arrow:hover, .featured-buttons .slick-arrow:focus,
+  .the-news .slick-arrow:hover, .the-news .slick-arrow:focus {
+    background:  !important;
+  }
+
+  .featured-buttons .slick-arrow:hover::before, .featured-buttons .slick-arrow:focus::before,
+  .the-news .slick-arrow:hover::before, .the-news .slick-arrow:focus::before {
+    color: #FFFFFF !important;
+  }
+
+.featured-buttons-simple .featured-button:hover .featured-button-textbox .featured-button-title,
+.featured-buttons-simple .featured-button:focus .featured-button-textbox .featured-button-title {
+  color:  !important;
+}
+
+.statistics .stat-icon,
+.statistics .stat-number {
+  font-size: 0px;
+}
+
+.statistics .slick-arrow:hover, .statistics .slick-arrow:focus {
+  background: ;
+}
+
+.news-image-link:hover ~ .news-single-title .news-single-title-link,
+.news-image-link:focus ~ .news-single-title .news-single-title-link {
+  color:  !important;
+}
+
+.ajax-load-more-wrap .alm-btn-wrap .alm-load-more-btn {
+  background:  !important;
+  border: 1px solid;
+  border-radius: 0;
+  color:  !important;
+  font-family: serif;
+  text-transform: uppercase;
+  transition: background 0.25s ease-in, color 0.25s ease-in;
+}
+  .ajax-load-more-wrap .alm-btn-wrap .alm-load-more-btn:hover {
+    background:  !important;
+    color: #FFFFFF !important;
+  }
+
+.main-navigation a, .secondary-navigation a {
+  font-family: sans-serif;
+}
+
+.staff-single .staff-image, .contact-single .contact-image {
+  object-position: ;
+}
+
+.archive.post-type-archive-staff .staff-container .staff-single .staff-image-link:hover ~ .staff-content .staff-name-link,
+.archive.post-type-archive-staff .staff-container .staff-single .staff-image-link:focus ~ .staff-content .staff-name-link {
+  color:  !important;
+}
+
+.contact-single .contact-image-link:hover ~ .contact-information h6,
+.contact-single .contact-image-link:focus ~ .contact-information h6 {
+  color:  !important;
+}
+
+.contact-single .contact-link[href^="http"]:hover h6,
+.contact-single .contact-link[href^="http"]:focus h6 {
+  color:  !important;
+}
+
+.search-submit {
+  background:  !important;
+  color: #FFFFFF !important;
+  font-family: sans-serif;
+}
+
+.search-submit:hover, .search-submit:focus {
+  background:  !important;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+  .page-template-homepage .featured-buttons-complex[data-btns="4"] .featured-button:nth-child(4n-1)::after {
+    background:  !important;
+  }
+
+  .page-template-homepage .featured-buttons-complex[data-btns="4"] .featured-button:nth-child(4n)::after {
+    background:  !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page-template-homepage .hero .hero-info .hero-title {
+    font-size: 0px;
+  }
+
+  .page-template-homepage .featured-buttons-complex[data-btns="4"] .featured-button:nth-child(4n-1)::after {
+    background:  !important;
+  }
+
+  .page-template-homepage .featured-buttons-complex[data-btns="4"] .featured-button:nth-child(4n)::after {
+    background:  !important;
+  }
+}
+

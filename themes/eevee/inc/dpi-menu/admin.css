@@ -1,0 +1,7 @@
+.acf-fields.acf-menu-item-fields, #add-calendar_category {
+  display: none;
+}
+
+.menu-item-depth-0 .acf-fields.acf-menu-item-fields {
+  display: block;
+}

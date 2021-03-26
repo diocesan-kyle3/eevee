@@ -1667,7 +1667,7 @@
 		),
 		array(
 			'key' => 'field_5dd2f6e0028ed',
-			'label' => 'Heading',
+			'label' => 'Header',
 			'name' => '',
 			'type' => 'tab',
 			'instructions' => '',

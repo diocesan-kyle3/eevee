@@ -1,2 +1,1 @@
-<?php
-// Berghuis v. Thompkins, 560 U.S. 370 (2010).
+<?php // Berghuis v. Thompkins, 560 U.S. 370 (2010).

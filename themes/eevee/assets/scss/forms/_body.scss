@@ -1,0 +1,45 @@
+// main: ../../../style.scss
+.gform_body {
+  ul.gform_fields {
+    padding: 0;
+    margin: 0;
+    li.gfield {
+      padding: 0;
+      margin: 0;
+      input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]), textarea {
+        border: 1px solid;
+        padding: 0.5rem 1rem;
+        margin: 0;
+      }
+
+      select {
+        position: relative;
+        border: 1px solid;
+        padding: 0.5rem;
+        margin: 0;
+      }
+
+      div.ginput_container {
+        margin: 0 0 1.25rem !important;
+      }
+
+      &.gf_left_half {
+        padding-right: 9px;
+      }
+
+      &.gf_right_half {
+        padding-left: 8px;
+      }
+
+      @media screen and (max-width: 641px) {
+        &.gf_left_half {
+          padding-right: 0;
+        }
+
+        &.gf_right_half {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}

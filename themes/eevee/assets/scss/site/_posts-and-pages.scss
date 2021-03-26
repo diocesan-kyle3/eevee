@@ -1,0 +1,108 @@
+// main: ../../../../style.scss
+button {
+	cursor: pointer;
+}
+
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.single-container article {
+	display: flex;
+	flex-flow: row nowrap;
+	width: 100%;
+	.single-top {
+		display: flex;
+		flex-flow: row wrap;
+		width: 100%;
+		a {
+			word-break: break-word;
+			transition: color 0.25s ease-in;
+		}
+	}
+
+	.single-content {
+		width: 100%;
+		.simcal-calendar {
+			li {
+				display: block;
+				a {
+					&:hover, &:focus {
+						color: inherit !important;
+					}
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 767px) {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.page-content, .entry-content, .entry-summary {
+	margin: 0 auto 2rem;
+	.single-container {
+		display: flex;
+		width: 100%;
+		margin-top: 2.75rem;
+		.single-thumbnail {
+			float: left;
+			margin: 0 1.5rem 1.5rem 0;
+			max-width: 25rem;
+		}
+
+		.single-content {
+			.single-title {
+				margin-top: 0 !important;
+			}
+		}
+
+		@media screen and (max-width: 767px) {
+			.single-thumbnail {
+				margin-right: 0;
+			}
+
+			.single-content {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.separator-graphic {
+	display: block;
+	margin: 30px auto;
+}
+
+@import "components/partials/alm";
+
+.clearfix::after {
+	display: block;
+	visibility: hidden;
+	clear: both;
+  content: '';
+  height: 0;
+}
+
+.dpi-bulletins-tab--image {
+  max-width: 300px;
+}
+
+#page {
+  overflow-x: hidden;
+}

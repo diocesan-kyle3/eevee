@@ -1,0 +1,96 @@
+// main: ../../../../../../style.scss
+.simcal-calendar {
+  padding: 0;
+  &>p {
+    display: none;
+  }
+
+  dl.simcal-events-list-container {
+    @include flex('b');
+    margin: 0;
+    dt.simcal-day-label {
+      display: none;
+    }
+
+    li.simcal-event {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      text-align: center;
+      height: 22.25rem;
+      margin: 0;
+      div.simcal-event-details {
+        width: 100%;
+        height: auto;
+        &>p {
+          display: none;
+        }
+
+        &>a {
+          @include flex('c', column);
+          text-decoration: none;
+          height: 19.75rem;
+          padding: 0.5rem;
+          transition: background 0.25s ease-in, height 0.25s ease-in;
+          .event_start {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+          }
+
+          .event_day-month, .event_day-ordinal, .event_details {
+            width: 100%;
+            transition: color 0.25s ease-in;
+          }
+
+          .event_day-month, .event_details {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+          }
+
+          .event_day-month {
+            font-weight: 400;
+            span {
+              font-size: 1.5rem;
+              line-height: 1;
+              &[data-event-format="l,"] {
+                font-size: 1.625rem;
+              }
+            }
+          }
+
+          .event_day-ordinal {
+            font-size: 3rem;
+            font-weight: 400;
+            margin: 0.75rem auto;
+          }
+
+          .event_details {
+            line-height: 1.25;
+            .simcal-event-title {
+              font-size: 1.375rem;
+              font-weight: 500;
+            }
+
+            .simcal-event-start {
+              font-size: 1rem;
+              font-weight: 400;
+            }
+          }
+
+          &:hover, &:focus {
+            height: 22.25rem;
+            .event_day-month, .event_day-ordinal, .event_details {
+              /* color: $quinary; */
+            }
+          }
+        }
+      }
+
+      &:not(:last-of-type) {
+        margin-right: 1.25rem;
+      }
+    }
+  }
+}

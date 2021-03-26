@@ -1,0 +1,65 @@
+// main: ../../../../../../style.scss
+.color-boxes {
+  @include flex('fs');
+  .color-box {
+    @include flex('fs', column, nowrap);
+    border: 2px solid transparent;
+    box-shadow: 0 3px 6px #00000029;
+    text-align: center;
+    text-decoration: none;
+    width: calc((100% / 3) - (5rem / 3));
+    max-width: 30rem; // 480px
+    padding: 2.5%;
+    margin: 0 2.5rem 2.5rem 0; // 40px
+    transition: background 0.25s ease-in, color 0.25s ease-in;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    i {
+      transition: transform 0.25s ease-in;
+    }
+
+    .color-box-title {
+      margin-top: 0 !important;
+    }
+
+    .color-box-content {
+      height: 100%;
+    }
+
+    &:hover, &:focus {
+      i {
+        transform: scaleX(1.5);
+      }
+    }
+  }
+
+  @media screen and (max-width: 1199px) {
+    .color-box {
+      .color-box-title {
+        margin-bottom: 0 !important;
+      }
+
+      .color-box-content {
+        display: none;
+      }
+
+      i {
+        margin-top: 1.125rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    .color-box {
+      width: 100%;
+      margin-right: auto;
+      margin-left: auto;
+      // unset 3 in a row
+      &:nth-child(3n) {
+        margin-right: auto;
+      }
+    }
+  }
+}

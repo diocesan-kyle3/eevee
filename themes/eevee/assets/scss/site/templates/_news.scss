@@ -1,0 +1,245 @@
+// main: ../../../../../style.scss
+.page-template-page-news {
+  .tagline {
+    text-align: center;
+  }
+
+  .title-container {
+    text-align: center;
+    h3 {
+      margin: 0 !important;
+    }
+
+    .sub-heading {
+      margin: 0 0 1em;
+    }
+  }
+
+  .upcoming {
+    @include flex('b');
+    margin-bottom: 1rem;
+    .myParish {
+      flex: 2;
+      .myparish-home-feed {
+        .myparish-home-feed-wrap {
+          display: flex;
+          box-shadow: 0px 0px 8px #888888;
+          height: 100%;
+          .myparish-home-feed-app {
+            @include flex('b');
+            flex: 1;
+            padding: 1.5rem;
+            .myparish-title {
+              width: 100%;
+              h2, h5 {
+                margin-bottom: 0;
+              }
+            }
+
+            .myparish_view_more {
+              display: none;
+            }
+          }
+
+          #mpa_slider {
+            flex: 3;
+            .dpi_mpa_messages_container {
+              display: flex;
+              flex-wrap: wrap;
+              padding: 0;
+              margin: 0;
+              li {
+                list-style: none;
+                width: 100%;
+                height: 100%;
+                padding: 1.25rem 1.25rem 1.25rem 0;
+                margin-bottom: 0;
+              }
+
+              a {
+                text-decoration: none;
+                .dpi_mpa_message {
+                  display: flex;
+                  flex-direction: column;
+                  .dpi_mpa_message_date {
+                    color: #636363;
+                    font-size: 1.25rem;
+                    font-weight: 700;
+                    text-shadow: 0.25px 0.25px #636363;
+                    margin-bottom: 0.625rem;
+                  }
+
+                  .dpi_mpa_message_text {
+                    color: #636363;
+                    font-size: 1.25rem;
+                    line-height: 1.5;
+                  }
+
+                  .dpi_mpa_message_link {
+                    color: #999999;
+                    margin-top: 1.25rem;
+                  }
+                }
+
+                &:hover, &:focus {
+                  .dpi_mpa_message {
+                    .dpi_mpa_message_date, .dpi_mpa_message_link {
+                      text-decoration: underline;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &~.events {
+        margin-left: 1rem;
+      }
+    }
+
+    .events {
+      flex: 1;
+      .simcal-calendar {
+        text-align: left;
+        min-height: 6.25rem; // 100px
+        padding: 0.625rem 0;
+        & > p {
+          display: none;
+        }
+
+        .simcal-calendar-list {
+          .simcal-events-list-container {
+            ul.simcal-events {
+              padding: 0;
+              margin: 0;
+              li.simcal-event {
+                list-style-type: none;
+                margin-bottom: 10px;
+                .simcal-event-details {
+                  display: flex;
+                  div.date {
+                    @include flex('c', column);
+                    align-items: center;
+                    box-shadow: 0px 0px 3px #000000;
+                    text-align: center;
+                    width: 4.375rem; // 70px
+                    height: 4.375rem; // 70px
+                    margin: 1px 10px;
+                    br {
+                      display: none;
+                    }
+
+                    span.day {
+                      font-size: 1.5rem;
+                      font-weight: 700;
+                    }
+                  }
+
+                  p {
+                    max-width: 65%;
+                    a {
+                      font-weight: 700;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .news-container {
+    .news {
+      .title-container {
+        h3 {
+          margin: 1.5rem 0 !important;
+        }
+      }
+
+      #ajax-load-more {
+        ul.alm-listing {
+          padding: 0;
+          margin: 0;
+          .alm-reveal {
+            @include flex('fs');
+            .alm-single {
+              @include flex('fs', column);
+              width: calc((100% / 3) - (2rem / 3));
+              margin: 0 1rem 1rem 0;
+              .featured-image {
+                margin-right: 0;
+              }
+
+              .alm-content {
+                h4 {
+                  line-height: 1.25;
+                }
+              }
+              &:nth-child(3n) {
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    .upcoming {
+      .myParish, .events {
+        flex: unset;
+        width: 100%;
+      }
+
+      .myParish {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .news-container {
+      .news {
+        #ajax-load-more {
+          ul.alm-listing {
+            .alm-reveal {
+              .alm-single {
+                width: calc(50% - 0.5rem);
+                &:nth-child(3n) {
+                  margin-right: 1rem;
+                }
+
+                &:nth-child(2n) {
+                  margin-right: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .news-container {
+      .news {
+        #ajax-load-more {
+          ul.alm-listing {
+            .alm-reveal {
+              .alm-single {
+                width: 100%;
+                margin-right: 0;
+                &:nth-child(3n) {
+                  margin-right: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

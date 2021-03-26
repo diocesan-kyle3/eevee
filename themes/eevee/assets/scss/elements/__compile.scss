@@ -1,0 +1,43 @@
+// main: ../../../style.scss
+
+html {
+	box-sizing: border-box;
+	margin-top: 0 !important;
+}
+
+*, *::before, *::after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: #FFFFFF; /* Fallback for when there is no custom background color defined. */
+	margin: 0;
+  overflow-x: hidden; /* Prevent lateral scrolling */
+}
+
+hr {
+	display: block;
+	clear: both;
+	border: 0;
+  width: 100%;
+  height: 40px;
+  margin: 0.4em auto 1em;
+}
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+figure {
+	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+input[type="search"] { /* Override iOS rounding */
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+@import "headings";
+@import "lists";
+@import "tables";

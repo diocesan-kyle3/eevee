@@ -1,0 +1,10 @@
+// main: ../../../style.scss
+.site-header, .site-content, .entry-content, .clear, .comment-content, .site-footer {
+	&::before, &::after {
+		@include clearfix;
+	}
+
+	&::after {
+		@include clearfix-after;
+	}
+}

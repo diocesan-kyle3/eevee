@@ -1,0 +1,22 @@
+// main: ../../../../../style.scss
+.archive {
+  [class*="s-container"] {
+    @include flex('fs', column, nowrap);
+    [class*="-single"] {
+      margin-bottom: 1rem;
+      [class*="-title"] {
+        margin-bottom: 0 !important;
+        transition: color 0.25s ease-in;
+      }
+    }
+  }
+
+  @import "ministry/taxonomy";
+  @import "staff/archive";
+
+  .no-results {
+    input[type="submit"] {
+      cursor: pointer;
+    }
+  }
+}

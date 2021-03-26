@@ -199,22 +199,23 @@ if( ! function_exists( 'eevee_scripts' ) ) :
 			true
 		);
 
-		wp_enqueue_script( 'eevee-general',
-			get_template_directory_uri() . '/assets/js/general.js',
-			array('jquery'),
-			'20200420',
-			true
-		);
-
 		wp_enqueue_script( 'eevee-smoothscroll',
 			get_template_directory_uri() . '/assets/js/smoothscroll.js',
 			array( 'jquery' ),
+			'20200420',
 			true
 		);
 
 		wp_enqueue_script( 'eevee-skip-link-focus-fix',
 			get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js',
 			array(),
+			'20200420',
+			true
+		);
+
+		wp_enqueue_script( 'eevee-general',
+			get_template_directory_uri() . '/assets/js/general.js',
+			array('jquery'),
 			'20200420',
 			true
 		);
@@ -240,6 +241,14 @@ if( ! function_exists( 'eevee_scripts' ) ) :
 
     wp_enqueue_script( 'tabs-js',
 			get_template_directory_uri() . '/assets/js/tabs.js',
+			array( 'jquery' ),
+			'20200420',
+			true
+		);
+
+
+    wp_enqueue_script( 'cpts-js',
+			get_template_directory_uri() . '/assets/js/cpts.js',
 			array( 'jquery' ),
 			'20200420',
 			true

@@ -1,0 +1,8 @@
+// main: ../../../../../../style.scss
+
+.page-template-homepage {
+  @import "hero";
+  @import "featured-buttons";
+  @import "banner";
+  @import "news";
+}

@@ -1,0 +1,104 @@
+// main: ../../../../../../style.scss
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 30vh;
+  max-height: calc(100vh - 16rem); // 256px
+  margin: 10.5rem auto 0; // 168px
+  .hero-overlay {
+    position: absolute;
+    background: #000000;
+    width: 100%;
+    height: 100%;
+  }
+
+  @import "../../components/partials/hero-slider";
+
+  .hero-video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    @supports (object-fit: cover) and (-ms-ime-align:auto) {
+      // Edge workaround
+      height: auto;
+      max-height: unset;
+    }
+  }
+
+  .hero-info {
+    position: absolute;
+    @include flex('c', column);
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 15;
+    .hero-title {
+      margin-bottom: 1rem;
+    }
+
+    .the-button {
+      border-color: transparent;
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 0.875rem 2rem;
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .hero-slider {
+      ul.slick-dots {
+        display: none !important;
+      }
+    }
+
+    .hero-info {
+      display: none;
+    }
+  }
+}
+
+.mobile-slider {
+  display: none;
+  .hero-title {
+    margin: 0 auto 0.25rem !important;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    text-align: center;
+    padding: 0.625rem 0.625rem 2rem;
+    ul.slick-dots {
+      @include flex('c');
+      display: flex !important;
+      align-items: center;
+      bottom: 0.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      li {
+        @include flex('c');
+        align-items: center;
+        width: 1rem;
+        height: 1rem;
+        button {
+          border: 1px solid #FFFFFF;
+          border-radius: 0;
+          width: 0.75rem;
+          height: 0.75rem;
+          transition: background 0.25s ease-in, border 0.25s ease-in;
+          &::before {
+            display: none;
+          }
+        }
+
+        &:first-child:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+// main: ../../../style.scss
+&.sticky {
+  position: fixed;
+  background: #FFFFFF;
+  .bottom-bar {
+    height: 5rem;
+    .site-branding .header-logo-link {
+      .header-logo-image {
+        max-width: 14rem; // 224px
+        max-width: 100%;
+        max-height: 4rem; // 64px
+      }
+    }
+  }
+}

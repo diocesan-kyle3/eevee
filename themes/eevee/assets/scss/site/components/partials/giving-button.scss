@@ -1,0 +1,15 @@
+// main: ../../../../../../style.scss
+.giving-button {
+  @include flex('c');
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 0.25s ease-in;
+  i {
+    margin-right: 0.75em;
+  }
+
+  &:hover, &:focus {
+    border: 1px solid;
+  }
+}

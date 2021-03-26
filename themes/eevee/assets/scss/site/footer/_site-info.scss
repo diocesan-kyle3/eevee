@@ -1,0 +1,28 @@
+// main: ../../../../../style.scss
+.site-info-container {
+  @include flex('b');
+  align-items: center;
+  padding: 0.5rem 5%;
+  div, a, span {
+    font-size: 0.8125rem;
+    font-weight: 400;
+  }
+
+  a {
+    text-decoration: none;
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  .hearts {
+    font-size: 1rem;
+  }
+
+  @media screen and (max-width: 575px){
+    .site-info, .diocesan {
+      text-align: center;
+      width: 100%;
+    }
+  }
+}

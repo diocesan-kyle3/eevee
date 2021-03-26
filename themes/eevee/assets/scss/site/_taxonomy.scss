@@ -1,0 +1,4 @@
+// main: ../../../style.scss
+.archive[class*="tax-"] {
+  @import "components/partials/cards";
+}

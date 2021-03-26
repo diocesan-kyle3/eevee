@@ -1,0 +1,10 @@
+// main: ../../../style.scss
+a {
+	&:hover, &:active {
+		outline: 0;
+	}
+
+	&:focus {
+		outline: thin dotted;
+	}
+}

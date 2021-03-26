@@ -1,0 +1,173 @@
+// main: ../../../../../../style.scss
+.banner-container {
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  .banner {
+    position: relative;
+    padding: 4rem 0;
+    text-align: center;
+    z-index: 1;
+    .banner-title {
+      margin: 0 auto;
+    }
+
+    &>div {
+      margin: 2rem auto;
+    }
+
+    .slick-arrow {
+      border: 1px solid;
+      width: 2.5rem;
+      height: 2.5rem;
+      top: 50%;
+      transition: background 0.25s ease-in;
+      z-index: 100;
+      &::before {
+        position: absolute;
+        font-family: "Font Awesome 5 Free";
+        font-size: 1.5rem;
+        font-weight: 700;
+        transform: translate(-50%, -50%);
+        transition: opacity 0.25s ease-in;
+      }
+
+      &.slick-prev {
+        left: 0;
+        &::before {
+          content: "\f053";
+        }
+      }
+
+      &.slick-next {
+        right: 0;
+        &::before {
+          content: "\f054";
+        }
+      }
+    }
+
+    @import "../../components/partials/simcal-calendar";
+
+    @import "../../components/partials/mass-times";
+
+    .mission-statement {
+      font-size: 1.375rem; // 22px
+      font-weight: 600;
+    }
+
+    .statistics {
+      .slick-track {
+        @include flex('a');
+        .statistic {
+          flex: 1;
+          .stat-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+          }
+
+          .stat-number {
+            font-size: 3.125rem; // 50px
+          }
+
+          .stat-text {
+            font-size: 1.125rem;
+          }
+        }
+      }
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+  }
+
+  @media screen and (max-width: 1199px) {
+    .banner .simcal-calendar dl.simcal-events-list-container li.simcal-event ~ li.simcal-event ~ li.simcal-event ~ li.simcal-event ~ li.simcal-event {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    .banner .simcal-calendar dl.simcal-events-list-container li.simcal-event ~ li.simcal-event ~ li.simcal-event ~ li.simcal-event {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .banner {
+      .simcal-calendar {
+        dl.simcal-events-list-container {
+          li.simcal-event {
+            flex: unset;
+            width: 100%;
+            height: auto;
+            margin-right: 0;
+            margin-bottom: 1.25rem;
+            div.simcal-event-details {
+              overflow: visible;
+              &>a {
+                flex-direction: row;
+                align-items: center;
+                height: auto;
+                min-height: 7.75rem;
+                .event_start {
+                  justify-content: center;
+                  flex: 1;
+                }
+
+                .event_day-month {
+                  order: 2;
+                  .simcal-event-start {
+                    font-size: 1.25rem;
+                    &[data-event-format="l,"] {
+                      font-size: 1.25rem;
+                    }
+                  }
+                }
+
+                .event_day-ordinal {
+                  order: 1;
+                  font-size: 2.5rem;
+                  margin: unset;
+                }
+
+                .event_details {
+                  order: 3;
+                  width: 50%;
+                  text-align: left;
+                  .simcal-event-title {
+                    font-size: 1.125rem;
+                  }
+                }
+
+                &:hover, &:focus {
+                  height: auto;
+                }
+              }
+            }
+
+            &:not(:last-of-type) {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+
+      .mass-times {
+        .mass-time {
+          flex: unset;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

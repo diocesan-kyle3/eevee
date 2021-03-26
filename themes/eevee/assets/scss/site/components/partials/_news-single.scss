@@ -1,0 +1,49 @@
+// main: ../../../../../../style.scss
+.news-single {
+  border: 1.5px solid;
+  min-height: 35rem; // 560px
+  margin: 0 1.25rem;
+  overflow: auto;
+  transition: opacity 0.25s ease-in;
+  .news-thumb {
+    .news-image {
+      object-fit: cover;
+      width: 100%;
+      height: 14.125rem;
+    }
+  }
+
+  .news-content {
+    padding: 1rem 1.875rem 1.5rem;
+    .news-single-title {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      margin-top: 0 !important;
+      overflow: hidden;
+      .news-single-link {
+        display: block;
+        line-height: 1.25;
+        text-decoration: none;
+        transition: color 0.25s ease-in;
+        &:hover, &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .news-date-container {
+      margin: 1rem auto;
+    }
+
+    .news-excerpt {
+      p {
+        margin: 0;
+        .read-more {
+          border: 2px solid;
+          transition: 0.25s ease-in;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+// main: ../../../style.scss
+.mm-menu {
+  .mm-close {
+    &::before, &::after {
+      width: 0.5rem;
+      height: 0.5rem;
+    }
+  }
+
+  .giving-button {
+    padding: 0.5rem;
+  }
+}

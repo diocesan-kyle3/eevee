@@ -1,0 +1,20 @@
+// main: ../../../../../style.scss
+.site-header#masthead {
+  position: absolute;
+  background: #FFFFFF;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.16);
+  width: 100%;
+  height: auto;
+  transition: 0.25s ease-in;
+  z-index: 9999;
+  .the-header {
+    .top-bar, .bottom-bar {
+      align-items: center;
+    }
+
+    @import "top-bar";
+    @import "bottom-bar";
+  }
+
+  @import "../../navigation/sticky";
+}

@@ -1,0 +1,14 @@
+// main: ../../../style.scss
+
+.gform_wrapper {
+  form {
+    @import "header";
+    @import "body";
+    @import "footer";
+  }
+}
+
+.gform_confirmation_message {
+  text-align: center;
+  margin-top: 1rem;
+}

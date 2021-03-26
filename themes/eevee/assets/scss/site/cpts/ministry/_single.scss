@@ -1,0 +1,46 @@
+// main: ../../../../../../style.scss
+&.single-ministry {
+  .single-container {
+    flex-wrap: wrap;
+    margin: 0 auto 3.75rem; // 60px
+    .single-thumbnail {
+      img {
+        border-radius: 50%;
+      }
+    }
+
+    .contact-persons {
+      @include flex('fs');
+      border-bottom: 1px solid;
+      width: 100%;
+      margin-bottom: 2rem;
+      .contact-person {
+        @include flex('fs');
+        align-items: center;
+        width: 100%;
+        padding: 0 0 0.5rem;
+        a {
+          transition: color 0.25s ease-in;
+        }
+
+        .contact-name, .contact-email {
+          margin: 0 0.5rem 0 0 !important;
+        }
+
+        .contact-name {
+          font-weight: 700;
+          border-right: 1px solid;
+          padding-right: 0.5rem;
+          margin-right: 0.5rem;
+          &.no-contact-info {
+            border-color: transparent !important;
+          }
+        }
+
+        .contact-phone {
+          margin: 0 !important;
+        }
+      }
+    }
+  }
+}

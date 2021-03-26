@@ -1,0 +1,43 @@
+// main: ../../../style.scss
+.wp-block-button__link, .wp-block-file a.wp-block-file__button {
+  transition: 0.25s ease-in;
+  &:hover, &:focus {
+    opacity: 0.85;
+  }
+}
+
+.wp-block-image {
+  &.is-resized, .alignleft, .aligncenter, .alignright {
+    margin-top: 0;
+  }
+}
+
+.wp-block-pullquote {
+  border-top: 4px solid #555D66;
+  border-bottom: 4px solid #555D66;
+  color: #40464D;
+  text-align: center;
+  padding: 3em 0;
+  margin-top: 1rem !important;
+  margin-bottom: 1.75rem !important; // 28px
+  cite {
+    font-style: normal;
+    text-transform: uppercase;
+  }
+}
+
+.wp-block-quote {
+  border-left: 4px solid #000;
+  margin-bottom: 1.75rem !important; // 28px
+  padding-left: 1em;
+  cite {
+    position: relative;
+    font-style: normal;
+    color: #6C7781;
+    margin-top: 1em;
+  }
+
+  &.is-style-large {
+    margin: 0 auto 1rem;
+  }
+}

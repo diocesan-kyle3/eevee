@@ -1,0 +1,68 @@
+// main: ../../../../../style.scss
+.bottom-bar {
+  position: relative;
+  height: 7.875rem;
+  transition: height 0.25s ease-in;
+  .site-branding {
+    position: relative;
+    display: flex;
+    float: left;
+    align-items: center;
+    max-width: 21.875rem;
+    height: 100%;
+    max-height: 7.875rem;
+    overflow: hidden;
+    z-index: 101;
+    a {
+      img {
+        width: auto;
+        max-width: calc(100% - 2rem);
+        max-height: 7.5rem;
+        transition: 0.25s ease-in;
+      }
+    }
+  }
+
+  @import "../../navigation/header-nav";
+
+  @media screen and (min-width: 1024px) {
+    .header-nav {
+      .main-navigation {
+        @include flex('c', column);
+      }
+
+      .mmenu-toggle {
+        display: none;
+      }
+    }
+  }
+
+
+  @media screen and (max-width: 1549px) {
+    .site-branding {
+      width: 18.75rem; // 300px
+    }
+  }
+
+  @media screen and (max-width: 1249px) {
+    .site-branding {
+      width: 15.625rem; // 250px
+    }
+
+    .header-nav .main-navigation .menu-primary-menu-container>ul.menu>li.menu-item>a {
+      font-size: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 1199px) {
+    .header-nav .main-navigation .menu-primary-menu-container>ul.menu>li.menu-item>a {
+      padding: 0 1rem;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .site-branding a img {
+      width: auto;
+    }
+  }
+}

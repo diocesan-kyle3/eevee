@@ -1,0 +1,100 @@
+// main: ../../../../../style.scss
+.top-bar {
+  width: 100%;
+  .top-bar-container {
+    @include flex('fe');
+    height: 2.5rem;
+    .social-media-container {
+      @include flex('b');
+      align-items: center;
+      .social-media-link {
+        text-decoration: none;
+        margin-right: 1.5rem;
+        transition: color 0.25s ease-in;
+      }
+    }
+
+    .header-search {
+      position: relative;
+      display: inline-block;
+      height: auto;
+      margin: 0;
+      .search-form {
+        position: relative;
+        display: flex;
+        border-right: 1px solid #FFFFFF;
+        box-shadow: none;
+        height: 2.5rem;
+        max-height: none;
+        top: unset;
+        right: unset;
+        overflow: hidden;
+        transition: 0.25s ease-in;
+        z-index: 99;
+        .search-submit {
+          cursor: pointer;
+          background: transparent;
+          border: 0;
+          border-radius: 0;
+          -webkit-appearance: unset;
+          width: 3.125rem; // 50px
+          height: 100%;
+          padding: 0;
+          transition: background 0.25s ease-in;
+          i {
+            font-size: 1.375rem;
+          }
+        }
+
+        label {
+          max-width: calc(100% - 3.125rem);
+          input.search-field {
+            background: transparent;
+            border: 0;
+            border-radius: 0;
+            color: #FFFFFF;
+            line-height: 1;
+            width: 100%;
+            height: 100%;
+            padding: 0 0.5em;
+            @include placeholder(#FFFFFF);
+          }
+        }
+      }
+
+      @media screen and (max-width: 1024px) {
+        display: inline-block;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .top-bar-container {
+      width: 100%;
+      .social-media-container {
+        .social-media-link {
+          i, span {
+            font-size: 1.5rem;
+          }
+        }
+      }
+
+      .giving-button, .header-search {
+        display: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    .top-bar-container {
+      .social-media-container {
+        width: 100%;
+        .social-media-link {
+          &:first-child {
+            margin-left: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

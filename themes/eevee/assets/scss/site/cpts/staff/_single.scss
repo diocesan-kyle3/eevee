@@ -1,0 +1,38 @@
+// main: ../../../../../../style.scss
+&.single-staff {
+  .single-container {
+    article {
+      flex-wrap: wrap;
+      .single-top {
+        .single-thumbnail {
+          flex: 1;
+        }
+
+        .single-info {
+          flex: 2;
+          .single-title, .staff-position, .staff-phone, .staff-email {
+            margin-bottom: 1rem;
+          }
+
+          .staff-position {
+            font-style: italic;
+          }
+        }
+      }
+
+      .single-content {
+        width: 100%;
+      }
+
+      @media screen and (max-width: 767px) {
+        .single-top {
+          flex-direction: column;
+          text-align: center;
+          .single-thumbnail {
+            margin: 0 auto 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}

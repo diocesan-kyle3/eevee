@@ -1,0 +1,121 @@
+// main: ../../../../../../style.scss
+.hero-slider {
+  height: 100%;
+  .slick-list {
+    height: 100%;
+    .slick-track {
+      height: 100%;
+      .hero-slide {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+      }
+    }
+  }
+
+  .slick-arrow {
+    border: 1px solid;
+    width: 2.5rem;
+    height: 2.5rem;
+    top: 50%;
+    transition: background 0.25s ease-in;
+    z-index: 100;
+    &::before {
+      position: absolute;
+      font-family: "Font Awesome 5 Free";
+      font-size: 1.5rem;
+      font-weight: 700;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.25s ease-in;
+    }
+
+    &.slick-prev {
+      left: 3rem;
+      &::before {
+        content: "\f053";
+      }
+    }
+
+    &.slick-next {
+      right: 3rem;
+      &::before {
+        content: "\f054";
+      }
+    }
+  }
+
+  ul.slick-dots {
+    @include flex('c');
+    display: flex !important;
+    align-items: center;
+    bottom: 2rem;
+    li {
+      @include flex('c');
+      align-items: center;
+      width: 1rem;
+      height: 1rem;
+      button {
+        border: 1px solid #FFFFFF;
+        border-radius: 0;
+        width: 0.75rem;
+        height: 0.75rem;
+        transition: background 0.25s ease-in, border 0.25s ease-in;
+        &::before {
+          display: none;
+        }
+      }
+
+      &:first-child:last-child {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .hero-slider {
+    .slick-arrow {
+      width: 3rem;
+      height: 3rem;
+      z-index: 1;
+      &::before {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .hero-slider {
+    .slick-arrow {
+      width: 2.5rem;
+      height: 2.5rem;
+      z-index: 1;
+      &::before {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .hero-slider {
+    .slick-arrow {
+      width: 2rem;
+      height: 2rem;
+      z-index: 1;
+      &::before {
+        font-size: 1rem;
+      }
+
+      &.slick-prev {
+        left: 2rem;
+      }
+
+      &.slick-next {
+        right: 2rem;
+      }
+    }
+  }
+}

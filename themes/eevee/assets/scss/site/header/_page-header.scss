@@ -1,0 +1,34 @@
+// main: ../../../../../style.scss
+.page-header {
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 16.1875rem; // 259px
+  margin-top: 10.5rem; // 168px
+  margin-bottom: 3.75rem; // 60px
+  .page-header-title {
+    position: absolute;
+    font-size: 3.5rem; // 56px
+    font-weight: 500;
+    line-height: 1.15;
+    text-align: center;
+    text-shadow: 0 0 0.5em #00000029;
+    width: 90%;
+    max-width: 40rem; // 640px
+    padding: 0;
+    margin: 0 auto !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+}

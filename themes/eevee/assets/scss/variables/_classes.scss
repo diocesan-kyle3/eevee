@@ -1,0 +1,79 @@
+// main: ../../../style.scss
+.limit-width {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.search-field {
+  font-size: 0.875rem;
+  padding: 0.875rem 0.5rem;
+}
+
+.search-submit {
+  cursor: pointer;
+  border-color: transparent;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0.875rem 2rem;
+  margin: 0 auto;
+  transition: background 0.25s ease-in;
+}
+
+.post-meta-wrapper, .scroll-button {
+  display: none;
+}
+
+.fa-phone {
+  transform: rotate(90deg);
+}
+
+.the-button {
+  display: table;
+  border: 2px solid;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.875rem 2rem;
+  margin: 0 auto;
+  transition: background 0.25s ease-in, color 0.25s ease-in;
+  &.over-background {
+    background: transparent;
+    margin: 0 auto;
+  }
+}
+
+.read-more-link {
+  padding: 0.875rem 1.75rem;
+  margin: 1.5em auto 0 0;
+}
+
+.pagination-single-inner {
+  @include flex('b');
+}
+
+.screen-reader-text {
+  position: absolute !important;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  word-wrap: normal !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+}
+
+body a.read-more {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px){
+  #wpadminbar {
+    position: fixed;
+  }
+}

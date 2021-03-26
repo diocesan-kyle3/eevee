@@ -1,0 +1,26 @@
+// main: ../../../../style.scss
+
+@font-face {
+  font-family: "diocesan-media";
+  src: url("assets/fonts/diocesan-media/diocesan-media.eot") format("embedded-opentype"),
+    url("assets/fonts/diocesan-media/diocesan-media.ttf") format("truetype"),
+    url("assets/fonts/diocesan-media/diocesan-media.woff") format("woff"),
+    url("assets/fonts/diocesan-media/diocesan-media.svg") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+
+[class^="dpi-"], [class*=" dpi-"] {
+  font-family: "diocesan-media" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-transform: none;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@import "evangelus";
+@import "myParish";

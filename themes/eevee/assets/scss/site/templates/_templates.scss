@@ -1,0 +1,152 @@
+// main: ../../../../../style.scss
+.error-404, .search .site-main {
+  width: 90%;
+  margin: 0 auto 3.75rem;
+}
+
+.error404, .search-no-results {
+  .error-404 {
+    .the-page-header {
+      height: auto;
+      margin-top: 0;
+      .page-title {
+        margin: 0 !important;
+      }
+    }
+  }
+
+  .page-content {
+    margin: 1.5rem 0;
+  }
+}
+
+.search {
+  .entry-title {
+    a {
+      transition: color 0.25s ease-in;
+    }
+  }
+
+  .the-page-header {
+    width: 100%;
+    .page-title {
+      margin: 0 auto !important;
+    }
+  }
+
+  .hentry {
+    @include flex('fs');
+    margin-bottom: 2.5rem;
+    .entry-header {
+      width: 100%;
+      .entry-title {
+        margin: 0 !important;
+      }
+    }
+
+    .entry-summary {
+      width: 100%;
+      &>* {
+        width: 100%;
+      }
+    }
+
+    /* .featured-img-link {
+      width: calc(100% / 3);
+      padding-right: 0.5rem;
+      .featured-img {
+        box-shadow: 0 3px 6px #00000029;
+        object-fit: cover;
+        width: 100%;
+        height: 12.5rem; // 200px
+      }
+    } */
+
+    .single-content {
+      @include flex('fs', column);
+      width: calc(200% / 3);
+      padding-left: 0.5rem;
+      .entry-title {
+        margin: 0 0 1.125rem !important;
+      }
+
+      .entry-summary {
+        margin: 0;
+        p {
+          width: auto;
+          max-width: unset;
+          margin-top: 0;
+        }
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      .featured-img-link, .single-content {
+        width: 100%;
+      }
+    }
+  }
+
+  .widget-area {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    .widget_search, .widget_recent_comments {
+      display: none;
+    }
+  }
+}
+
+.page-template-page-contact {
+  input[type="submit"] {
+    cursor: pointer;
+  }
+
+  .contact-container {
+    @include flex('b');
+    .contact-hours, .contact-methods {
+      flex: 1;
+      .contact-label {
+        font-weight: 700;
+        margin: 0 0.5em 0 0 !important;
+      }
+    }
+
+    .contact-hours {
+      .contact-hour {
+        @include flex('fs');
+        align-items: baseline;
+        &:not(:last-child) {
+          margin-bottom: 1em;
+        }
+      }
+    }
+
+    .contact-methods {
+      .contact-method {
+        @include flex('fs');
+        align-items: baseline;
+        &:not(:last-child) {
+          margin-bottom: 1em;
+        }
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      .contact-hours, .contact-methods {
+        flex: unset;
+        width: 90%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .contact-map {
+    width: 100%;
+    height: 25rem; // 400px
+  }
+}
+
+.page-template-page-mass-times .section-times hr:last-child {
+  display: none;
+}

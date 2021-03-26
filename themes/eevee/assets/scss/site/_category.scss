@@ -1,0 +1,70 @@
+// main: ../../../style.scss
+body.category {
+  .site-main {
+    .result-container {
+      margin-top: 3.75rem;
+      #ajax-load-more {
+        width: 100%;
+        .alm-reveal {
+          @include flex('fs');
+          @import "components/partials/news-single";
+
+          .news-single {
+            width: calc((100% / 3) - (5rem / 3));
+            margin: 0 2.5rem 2.5rem 0;
+            &:nth-of-type(3n) {
+              margin-right: 0;
+            }
+          }
+        }
+
+        .alm-btn-wrap .done {
+          display: none;
+        }
+      }
+    }
+
+    &>p {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 1199px) {
+    .site-main {
+      .result-container {
+        #ajax-load-more {
+          .alm-reveal {
+            .news-single {
+              width: calc(50% - 1.25rem);
+              &:nth-of-type(3n) {
+                margin-right: 2.5rem;
+              }
+
+              &:nth-of-type(even) {
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .site-main {
+      .result-container {
+        #ajax-load-more {
+          .alm-reveal {
+            .news-single {
+              width: 100%;
+              margin-right: 0;
+              &:nth-of-type(3n) {
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

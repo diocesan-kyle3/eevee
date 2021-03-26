@@ -1,0 +1,137 @@
+// main: ../../../../../../style.scss
+.featured-buttons {
+  margin: 1.5rem auto 3.25rem;
+  .slick-list {
+    .slick-track {
+      padding-top: 0.5rem;
+    }
+  }
+
+  .featured-button {
+    position: relative;
+    text-decoration: none;
+    min-width: calc(20% - 1.5rem);
+    margin: 0 0.75rem 1.25rem;
+    opacity: 1;
+    transition: border 0.25s ease-in, opacity 0.25s ease-in;
+    &::before {
+      position: absolute;
+      content: "";
+      background: transparent;
+      width: 100%;
+      height: 0.5rem;
+      top: -0.375rem;
+      left: 0;
+      transition: background 0.25s ease-in;
+    }
+
+    .featured-button-image, .featured-button-textbox {
+      border: 1.5px solid;
+      width: 100%;
+    }
+
+    .featured-button-image {
+      border-bottom: 0;
+      object-fit: cover;
+      height: 12.1875rem;
+    }
+
+    .featured-button-textbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 4.375rem;
+      padding: 0.5rem;
+      transition: background 0.25s ease-in;
+      .featured-button-text {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        font-size: 1.25rem;
+        font-weight: 500;
+        line-height: 1.15;
+        text-align: center;
+        max-height: 100%;
+        overflow: hidden;
+        transition: color 0.25s ease-in;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &[data-btns="6"] {
+    .slick-list .slick-track .featured-button {
+      min-width: calc((100% / 3) - 1.5rem);
+    }
+  }
+
+  &[data-btns="7"], &[data-btns="8"] {
+    .slick-list .slick-track .featured-button {
+      min-width: calc(25% - 1.5rem);
+    }
+  }
+
+  .slick-arrow {
+    border: 1px solid #454545;
+    width: 2.25rem;
+    height: 2.25rem;
+    transition: background 0.25s ease-in;
+    z-index: 1;
+    &::before {
+      position: absolute;
+      color: #454545;
+      font-family: "Font Awesome 5 Free";
+      font-size: 0.75rem;
+      font-weight: 700;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.25s ease-in;
+    }
+
+    &:hover, &:focus {
+      background: #454545;
+      &::before {
+        color: #FFFFFF;
+      }
+    }
+
+    &.slick-prev, &.slick-next {
+      top: calc(100% + 0.75rem);
+    }
+
+    &.slick-prev {
+      left: calc(50% - 2.5rem);
+      &::before {
+        content: "\f053";
+      }
+    }
+
+    &.slick-next {
+      right: calc(50% - 2.5rem);
+      &::before {
+        content: "\f054";
+      }
+    }
+  }
+
+  @media screen and (max-width: 1199px) {
+    /* "Activate" Slick Slider */
+    margin-bottom: 5.375rem;
+    .slick-list {
+      .slick-track {
+        .featured-button {
+          min-width: unset !important; // overwrite data-btns CSS
+          &:not(.slick-active) {
+            opacity: 0.25;
+          }
+
+          &:hover, &:focus {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

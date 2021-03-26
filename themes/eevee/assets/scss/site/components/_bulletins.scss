@@ -1,0 +1,21 @@
+// main: ../../../../../style.scss
+.dpi_bulletin_wrapper .tab-content > .active {
+	justify-content: flex-start;
+}
+
+.entry-content .dpi_bulletin_wrapper .dpi-bulletins-tab {
+	max-width: 37%;
+}
+
+@media screen and (max-width: 1024px) {
+	.dpi_bulletin_wrapper .tab-content > .active {
+    flex-direction: column;
+    align-items: center;
+	}
+
+	.entry-content .dpi_bulletin_wrapper .dpi-bulletins-tab {
+		width: auto;
+		max-width: none;
+		padding: auto;
+	}
+}
